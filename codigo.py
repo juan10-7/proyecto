@@ -166,17 +166,25 @@ def preparacionicfes():
     titulo.config(bg = "grey",fg="black", font=("Helvetica", 15))
     titulo.place(x=10,y=10)
 
-    titulo = Label(frame_preparacionicfes, text="que tengo en unna memoria")
+    titulo = Label(frame_preparacionicfes, text=" de anteriores icfes que tengo en una memoria")
     titulo.config(bg = "grey",fg="white", font=("Helvetica", 15))
     titulo.place(x=10,y=50)
 
 def proyectodevida():
-    global toplevel_centigrados
-    toplevel_centigrados = Toplevel()
-    toplevel_centigrados.title("proyectodevida")
-    toplevel_centigrados.resizable(False, False)
-    toplevel_centigrados.geometry("450x380")
-    toplevel_centigrados.config(bg="grey")
+    global toplevel_proyectodevida
+    toplevel_proyectodevida = Toplevel()
+    toplevel_proyectodevida.title("proyectodevida")
+    toplevel_proyectodevida.resizable(False, False)
+    toplevel_proyectodevida.geometry("450x380")
+    toplevel_proyectodevida.config(bg="grey")
+
+    frame_proyectodevida=Frame(toplevel_proyectodevida)
+    frame_proyectodevida.config(bg="grey", width=450, height=400)
+    frame_proyectodevida.place(x=0,y=0)
+
+    titulo = Label(frame_proyectodevida, text=" se policia o ir a la marina")
+    titulo.config(bg = "grey",fg="white", font=("Helvetica", 15))
+    titulo.place(x=10,y=50)
 
 logo = PhotoImage(file="img/imagen.png")
 lb_logo = Label(ventana_principal, image=logo, bg="blue")
@@ -187,41 +195,35 @@ frame_1.config(bg="white", text="nacimiento", width = 10 ,height = 2, command=na
 frame_1.place(x = 10 , y =10)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="familia", width = 10 ,height = 2, command=familia)
+frame_1.config(bg="red", text="familia", width = 10 ,height = 2, command=familia)
 frame_1.place(x = 10 , y =70)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="educacion", width = 10 ,height = 2, command=educacion)
+frame_1.config(bg="green", text="educacion", width = 10 ,height = 2, command=educacion)
 frame_1.place(x = 10 , y =130)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="amigos", width = 10 ,height = 2, command=amigos)
+frame_1.config(bg="orange", text="amigos", width = 10 ,height = 2, command=amigos)
 frame_1.place(x = 10 , y =190)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="hoobies", width = 10 ,height = 2, command=hoobies)
+frame_1.config(bg="blue", text="hoobies", width = 10 ,height = 2, command=hoobies)
 frame_1.place(x = 10 , y =250)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="horario", width = 10 ,height = 2, command=horario)
+frame_1.config(bg="brown", text="horario", width = 10 ,height = 2, command=horario)
 frame_1.place(x = 10 , y =310)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="preparacion icfes", width = 10 ,height = 2, command=preparacionicfes)
+frame_1.config(bg="grey", text="preparacion icfes", width = 10 ,height = 2, command=preparacionicfes)
 frame_1.place(x = 10 , y =370)
 
 frame_1 = Button(ventana_principal)
-frame_1.config(bg="white", text="proyecto de vida", width = 10 ,height = 2, command=proyectodevida)
+frame_1.config(bg="pink", text="proyecto de vida", width = 10 ,height = 2, command=proyectodevida)
 frame_1.place(x = 10 , y =430)
 
-frame_entrada = Frame(ventana_principal)
-frame_entrada.config(bg="blue", width=200, height=70)
-frame_entrada.place(x=250, y=280)
-
 titulo = Label(ventana_principal, text="Juan Fernando Santana cala")
-titulo.config(bg = "black",fg="white", font=("Arial", 15))
+titulo.config(bg = "red",fg="white", font=("Arial", 15))
 titulo.place(x=220,y=280)
-
-
 
 ventana_principal.mainloop()
